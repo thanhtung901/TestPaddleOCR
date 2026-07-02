@@ -1,0 +1,21 @@
+python tools\train.py -c configs\rec\PP-OCRV5\PP-OCRV5_mobiile_rec.yml -o Global.pretrained_model=./PP-OCRv5_mobile_recpretrained.pdparams
+
+
+python3 tools/eval.py -c configs/rec/PP-OCRv5/PP-OCRv5_server_rec.yml -o \
+Global.pretrained_model=output/xxx/xxx.pdparams
+
+
+
+
+python tools\train.py -c D:\1.HQ5\2.Code\Python\TEST\PaddleOCR\configs\rec\PP-OCRv5\PP-OCRv5_mobile_rec.yo Global.pretrained_model=D: 1.HuangQS\2.Code\Python\TEST\PaddleOCR\PP-OCRv5_mobile_rec_pretrained.pdparams
+
+python tools\train.py -c D:\1.HQ5\2.Code\Python\TEST\PaddleOCR\configs\rec\PP-OCRv5\PP-OCRv5_mobile_rec.yo Global.pretrained_model=D: 1.HuangQS\2.Code\Python\TEST\PaddleOCR\output\PP-OCRv5_mobile_rec\best_model\model.pdparams
+
+python tools\eval.py -c D:\1.HuangQS\2.Code\Python\TEST\PaddleOCR\configs\rec\PP-OCRv5\PP-OCRv5_mobile_rec.yml -o Global.pretrained_model=D:\1.HuangQS\2.Code\Python\TEST\PaddleOCR\output\PP-OCRv5_mobile_rec\best_model\model.pdparams
+
+
+python tools\train.py -c D:\1.HuangQS\2.Code\Python\TEST\PaddleOCR\configs\rec\PP-OCRv5\PP-OCRv5_mobile_rec.yml -o Global.pretrained_model=
+
+python tools/export_model.py -c D:\1.HuangQS\2.Code\Python\TEST\PaddleOCR\configs\rec\PP-OCRv5\PP-OCRv5_mobile_rec.yml  -o Global.pretrained_model=output/PP-OCRv5_mobile_rec/best_accuracy.pdparams  Global.save_inference_dir="./PP-OCRv5_best_rec_infer/"
+
+python tools/export_model.py -c configs/rec/PP-OCRv5/PP-OCRv5_mobile_rec.yml  -o Global.pretrained_model=output/PP-OCRv5_mobile_rec/best_accuracy.pdparams Global.save_inference_dir="./PP-OCRv5_server_rec_infer/"
